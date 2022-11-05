@@ -28,7 +28,17 @@ class _Categories(object):
             16: 'Range Extender',
             17: 'IP Camera',
             18: 'Video Door Bell',
-            19: 'Air Purifier'
+            19: 'Air Purifier',
+            20: 'Heater',
+            21: 'Air Conditioner',
+            22: 'Humidifier',
+            23: 'Dehumidifier',
+            26: 'Speaker',
+            28: 'Sprinkler',
+            29: 'Faucet',
+            30: 'Shower Head',
+            31: 'Television',
+            32: 'Target Controller',
         }
 
         self._categories_rev = \
@@ -41,7 +51,7 @@ class _Categories(object):
         if item in self._categories_rev:
             return self._categories_rev[item]
 
-        raise KeyError('Item {item} not found'.format_map(item=item))
+        raise KeyError(f'Item {item} not found')
 
 
 Categories = _Categories()

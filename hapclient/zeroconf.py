@@ -45,6 +45,9 @@ class CollectingListener(object):
         """
         return self.data
 
+    def update_service(self):
+        pass
+
 
 def discover_homekit_devices(timeout=1):
     """
@@ -67,7 +70,7 @@ def discover_homekit_devices(timeout=1):
 
         device = {
             'name': info.name,
-            'address': inet_ntoa(info.address),
+            'addresses': list(map(inet_ntoa, info.addresses)),
             'port': info.port,
             'c#': int(info.properties[b'c#'].decode()),
             'ff': int(info.properties[b'ff'].decode()),

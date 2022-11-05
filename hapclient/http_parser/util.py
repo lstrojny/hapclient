@@ -5,7 +5,7 @@
 
 
 import sys
-from collections import MutableMapping
+from collections.abc import MutableMapping
 
 if sys.version_info[0] == 3:
     from urllib.parse import unquote
